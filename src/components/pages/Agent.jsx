@@ -22,17 +22,11 @@ const Agent = () => {
 
   return (
     <>
-      <section className="relative flex items-center justify-center h-screen overflow-hidden  h-[100%] w-[100vw] max-h-[85vh] sm:px-[5%] px-0">
-        <div
-          className={`relative z-30 flex items-end justify-center flex-col w-full h-full`}
-        >
-          <div
-            className={`relative flex md:flex-row-reverse flex-col-reverse justify-end items-center`}
-          >
-            <div
-              className={`${layout.sectionInfo} relative md:mr-16 max-w-[16rem]`}
-            >
-              <div className="relative m-width-[25%] pb-10 border-b border-gray-500 sm:block hidden">
+      <section className="relative flex items-center justify-center h-screen  sm:h-[85vh] h-[60vh] w-[100vw] sm:px-[5%] px-0">
+        <div className={`relative flex items-end justify-center flex-col w-full h-full`}>
+          <div className={`relative flex md:flex-row-reverse flex-col-reverse justify-end items-center`}>
+            <div className={`${layout.sectionInfo} relative md:mr-16 max-w-[16rem]`}>
+              <div className="relative m-width-[25%] pb-10 border-b border-gray-500  sm:block hidden">
                 <h5 className="font-semiold text-secondary">// ROLE</h5>
                 <div className="flex mb-6">
                   <h2 className="font-extrabold text-secondary text-[3rem] uppercase">
@@ -53,13 +47,13 @@ const Agent = () => {
               </div>
             </div>
           </div>
-          <div className="absolute left-0 top-0 overflow-x-scroll sm:h-[100vh] h-[8rem] w-auto px-2 w-[56vw] no-scrollbar cursor-scroll">
+          <div className="hidden sm:block absolute left-0 top-0 overflow-x-hidden overflow-y-scroll h-[100%] no-scrollbar w-auto px-2 w-[56vw] cursor-scroll">
             <ul className="pl-10 cursor-pointer">
               {agents &&
                 agents.map((agent, index) => (
                   <li
                     key={agent.uuid}
-                    className="relative sm:float-none float-left"
+                    className="relative"
                   >
                     <Link to={`/agent/${agent.displayName}`}>
                       <span
@@ -86,8 +80,8 @@ const Agent = () => {
           autoPlay
           loop
           muted
-          poster="https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltbded518020183769/5eb26f5389bac8148a8006cc/agent-background-generic.JPG"
-          className="absolute z-10 sm:w-[100vw] h-full object-cover"
+          poster="https://images.contentstack.io/v3/assets/b500ltb6530b271fddd0b1/bltbded518020183769/5eb26f5389bac8148a8006cc/agent-background-generic.JPG"
+          className="absolute sm:w-[100vw] h-full object-cover z-[-1]"
         >
           <source
             src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt29d7c4f6bc077e9e/5eb26f54402b8b4d13a56656/agent-background-generic.mp4"
@@ -97,10 +91,10 @@ const Agent = () => {
         <img
           src={agent.fullPortrait}
           alt="agents"
-          className="absolute z-10 w-auto h-[100vh] object-cover bottom-[-8rem]"
+          className="absolute w-auto sm:h-[110vh] h-[80vh] object-cover bottom-[-6rem] z-[-1]"
         ></img>
       </section>
-      <div className={`relative ${styles.paddingX} my-10`}>
+      <div className={`relative ${styles.paddingX} my-10 pt-[4rem]`}>
         <div className="relative pb-10 border-b border-[#000]-500 sm:hidden visible">
           <h5 className="font-semiold text-black">// ROLE</h5>
           <div className="flex mb-6">
@@ -111,7 +105,7 @@ const Agent = () => {
               <img
                 src={agent.role.displayIcon}
                 alt={agent.role.displayName}
-                className="h-full w-full"
+                className="h-full w-full bg-[#000] rounded-full"
               />
             </div>
           </div>

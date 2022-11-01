@@ -7,7 +7,7 @@ const LastEpisode = () => (
     className="relative flex items-center justify-center h-screen h-full overflow-hidden h-[100vh]"
   >
     <div
-      className={`relative z-30 flex items-center justify-end flex-col px-[5%] py-[4rem] w-full h-full ${styles.boxWidth}`}
+      className={`relative flex items-center justify-end flex-col px-[5%] py-[4rem] w-full h-full ${styles.boxWidth}`}
     >
       <div className="relative my-10 sm:ml-4 w-full py-4">
         <div className="my-14">
@@ -28,7 +28,7 @@ const LastEpisode = () => (
     </div>
     <img
       src={overviewimg}
-      className="absolute t-0 z-10 w-auto h-full min-w-full min-h-full max-w-none"
+      className="absolute t-0 w-auto h-full min-w-full min-h-full max-w-none z-[-1]"
       alt="overview"
     />
   </section>

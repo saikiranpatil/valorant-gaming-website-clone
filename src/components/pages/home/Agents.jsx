@@ -40,12 +40,12 @@ const Agents = () => (
           </div>
           <div className={`flex ${styles.flexCenter} relative`}>
             <div
-              className={`flex ${styles.flexCenter} relative z-30 w-[100%] h-[100%]`}
+              className={`flex ${styles.flexCenter} relative w-[100%] h-[100%]`}
             >
               <img
                 src="https://playvalorant.com/static/agents-group-31d7ce5a3637e45d8b25d2fd03159e6c.png"
                 alt="agents"
-                className="w-[100%] h-[100%] relative z-[5]"
+                className="w-[100%] h-[100%] relative"
               />
             </div>
           </div>
