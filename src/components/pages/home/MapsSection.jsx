@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styles, { layout } from "../../../style";
 
 const Maps = () => (
@@ -24,14 +25,16 @@ const Maps = () => (
                 moments. Make the play others will imitate for years to come.
               </span>
               <div className=" md:flex-start flex md:justify-start justify-center">
-                <button className="btn mt-16">
-                  <span className="btn__inner">
-                    <span className="btn__slide"></span>
-                    <span className="btn__content text-secondary">
-                      VIEW ALL MAPS
+                <Link to="/maps">
+                  <button className="btn mt-16">
+                    <span className="btn__inner">
+                      <span className="btn__slide"></span>
+                      <span className="btn__content text-secondary">
+                        VIEW ALL MAPS
+                      </span>
                     </span>
-                  </span>
-                </button>
+                  </button>
+                </Link>
               </div>
             </div>
           </div>
