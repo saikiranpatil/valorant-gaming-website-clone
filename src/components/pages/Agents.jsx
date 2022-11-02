@@ -44,7 +44,7 @@ const Agents = () => {
                       <span className="font-bold text-secondary absolute left-[-1.5rem] top-[0.5rem]">
                         {index + 1}
                       </span>
-                      <h2 className="relative font-bold text-secondary mb-8 sm:text-[6rem] text-[3rem] leading-none my-0 leading-[0.86] hover:pl-[1rem]  transition-all ease-in duration-300">
+                      <h2 className="relative font-bold text-secondary mb-8 sm:text-[6rem] text-[3rem] leading-none my-0 leading-[0.86] hover:pl-[1rem]  transition-all ease-in duration-300 uppercase">
                         {agent.displayName}
                       </h2>
                     </Link>

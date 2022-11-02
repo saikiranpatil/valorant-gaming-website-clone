@@ -64,7 +64,7 @@ const Agent = () => {
                         {index + 1}
                       </span>
                       <h2
-                        className={`relative font-bold text-secondary mb-8 sm:text-[6rem] text-[3rem] leading-none my-0 leading-[0.86] hover:pl-[1rem]  transition-all ease-in duration-300 ${
+                        className={`relative font-bold text-secondary mb-8 sm:text-[6rem] text-[3rem] leading-none my-0 leading-[0.86] hover:pl-[1rem]  transition-all ease-in duration-300 uppercase ${
                           agent.displayName === agentName ? "text-primary" : ""
                         }`}
                       >
