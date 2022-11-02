@@ -8,7 +8,7 @@ const Hero = () => (
     className="relative flex items-center justify-center h-screen overflow-hidden min-h-[490px] h-[36vh]"
   >
     <div
-      className={`relative z-[-1] flex items-center justify-center flex-col px-[5%] py-[4rem] w-full h-full`}
+      className={`relative flex items-center justify-center flex-col px-[5%] py-[4rem] w-full h-full`}
     >
       <div className="sm:py-10 py-0 flex items-center justify-between sm:flex-col flex-col-reverse mb-auto">
         <h6 className="text-white font-semibold mt-4 text-center sm:mb-10">
