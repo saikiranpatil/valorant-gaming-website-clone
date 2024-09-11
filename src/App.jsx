@@ -6,7 +6,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Agents from "./components/pages/Agents";
 import Agent from "./components/pages/Agent";
 import Maps from "./components/pages/Maps";
-import Cart from "./components/pages/shop";
 
 const App = () => {
   
@@ -18,7 +17,6 @@ const App = () => {
           <Route excat path="/" element={<Home />} />
           <Route excat path="/agents" element={<Agents />} />
           <Route excat path="/maps" element={<Maps />} />
-          <Route excat path="/cart" element={<Cart />} />
           <Route
             excat
             path="/agent/:agentName"
