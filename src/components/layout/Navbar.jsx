@@ -20,7 +20,7 @@ const Navbar = () => {
                 <img
                   src={logo}
                   alt="valorant"
-                  className="relative w-[38px] h-[26px]"
+                  className="relative w-[58px] h-[56px]"
                 />
               </div>
             </Link>
