@@ -1,9 +1,8 @@
 import styles from "../../../style";
 import Hero from "../home/Hero";
 import News from "../home/News";
-import LastEpisode from "../home/LastEpisode";
-import Overview from "../home/Overview";
-import Agents from "./Agents";
+/*import LastEpisode from "../home/LastEpisode";*/
+import About from "./About";
 import Maps from "./MapsSection";
 
 const Home = () => (
@@ -12,11 +11,9 @@ const Home = () => (
       <div className={`${styles.boxWidth}`}>
         <Hero />
         <News />
-        <LastEpisode />
       </div>
     </div>
-    <Overview />
-    <Agents />
+    <About />
     <Maps />
   </>
 );
