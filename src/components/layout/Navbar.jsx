@@ -4,6 +4,8 @@ import { close, valorantlogo, menu, riotlogo } from "../../assets";
 import { navLinks } from "../../constants";
 import styles from "../../style";
 import { Link } from "react-router-dom";
+import { ShoppingCart } from "phosphor-react";
+
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -31,9 +33,8 @@ const Navbar = () => {
               {navLinks.map((navLink, index) => (
                 <li
                   key={navLink.id}
-                  className={`font-poppins font-normal relative cursor-pointer text-center text-[13px] hover:bg-[gray]/40 px-4 py-2 rounded-[8px] uppercase ${
-                    index === navLinks.length - 1 ? "mr-0" : "mr-6"
-                  } text-white`}
+                  className={`font-poppins font-normal relative cursor-pointer text-center text-[13px] hover:bg-[gray]/40 px-4 py-2 rounded-[8px] uppercase ${index === navLinks.length - 1 ? "mr-0" : "mr-6"
+                    } text-white`}
                 >
                   {navLink.id.length > 1 && navLink.id[1] === "#" ? (
                     <a href={`${navLink.id}`} className=" h-[80px]">
@@ -50,9 +51,11 @@ const Navbar = () => {
           </div>
           <div className="mr-4">
             <div className="flex justify-end items-center">
-              <div id="navbutton" className="md:flex hidden">
-                PLAY NOW
-              </div>
+              <Link to="/cart">
+                <div id="navbutton" className="md:flex hidden">
+                  <button><ShoppingCart size={20} /></button>
+                </div>
+              </Link>
               <div className="md:hidden  block bg-[gray]/40 rounded-full w-[48px] h-[48px] p-2">
                 <img
                   src={menu}
