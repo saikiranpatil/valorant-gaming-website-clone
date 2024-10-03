@@ -1,0 +1,104 @@
+.shopTitle {
+  margin-top: 100px;
+  text-align: center;
+  font-size: 40px;
+}
+
+.products {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: center;
+}
+
+.product {
+  border-radius: 0px;
+  width: 400px;
+  height: 450px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.product img {
+  width: 100%;
+  max-width: 500px; /* Restrict the image size for responsiveness */
+  height: auto;
+  border-radius: 0px;
+}
+
+.product .description {
+  text-align: center;
+  margin: 0px 0px -36px 0px;
+}
+
+.product:hover {
+  transition: 0.3s ease-in;
+  cursor: pointer;
+}
+
+.addToCartBttn {
+  background-color: transparent;
+  border: 2px solid rgb(19, 19, 19);
+  min-width: 100px;
+  padding: 5px 10px;
+  border-radius: 15px;
+}
+
+.addToCartBttn:hover {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1200px) {
+  .products {
+    grid-template-columns: 1fr 1fr; /* Two products per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: 1fr; /* One product per row */
+  }
+
+  .shopTitle {
+    font-size: 30px;
+  }
+
+  .product {
+    width: 80%;
+    margin: 20px;
+  }
+
+  .product img {
+    max-width: 100%; /* Full width of the product card */
+  }
+}
+
+@media (max-width: 480px) {
+  .shopTitle {
+    font-size: 24px;
+  }
+
+  .addToCartBttn {
+    min-width: 80px;
+    padding: 3px 8px;
+  }
+}
+
+
+.original-price {
+  text-decoration: line-through; /* Strikethrough effect */
+  color: red; /* Color for the original price */
+  margin-right: 10px; /* Space between the original and discounted prices */
+}
+
+.discounted-price {
+  color: green; /* Color for the discounted price */
+  font-weight: bold; /* Make the discounted price bold */
+}
