@@ -5,6 +5,7 @@ import { navLinks } from "../../constants";
 import styles from "../../style";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "phosphor-react";
+import { Logo } from "../../assets";
 
 
 const Navbar = () => {
@@ -18,11 +19,11 @@ const Navbar = () => {
         >
           <div className={`${styles.flexCenter} h-[80px]`}>
             <Link to="/">
-              <div className={`${styles.flexCenter} h-[80px] sm:ml-4 ml-10`}>
+              <div className={`${styles.flexCenter} h-[80px] sm:ml-5 ml-10`}>
                 <img
-                  src={valorantlogo}
+                  src={Logo}
                   alt="valorant"
-                  className="relative w-[38px] h-[26px]"
+                  className="relative w-[58px] h-[50px]"
                 />
               </div>
             </Link>
