@@ -1,4 +1,4 @@
-import { facebook, instagram, linkedin, twitter } from "../assets";
+import { Discord, instagram, WhatsApp } from "../assets";
 
 export const navLinks = [
   {
@@ -10,20 +10,20 @@ export const navLinks = [
     title: "News",
   },
   {
-    id: "/#overview",
-    title: "Overview",
-  },
-  {
-    id: "/#about",
+    id: "/",
     title: "About",
   },
   {
-    id: "/agents",
-    title: "Agents",
+    id: "/",
+    title: "Review",
   },
   {
-    id: "/maps",
-    title: "Maps",
+    id: "/shop",
+    title: "Shop",
+  },
+  {
+    id: "/contact",
+    title: "Contact Us",
   },
 ];
 
@@ -55,21 +55,17 @@ export const socialMedia = [
   {
     id: "social-media-1",
     icon: instagram,
-    link: "https://www.instagram.com/",
+    link: "http://instagram.com/teamfury.store",
   },
   {
     id: "social-media-2",
-    icon: facebook,
-    link: "https://www.facebook.com/",
+    icon: WhatsApp,
+    link: "http://chat.whatsapp.com/H7LvFLMR88IAs2T1Quy6wZ",
   },
   {
     id: "social-media-3",
-    icon: twitter,
-    link: "https://www.twitter.com/",
+    icon: Discord,
+    link: "http://discord.com/invite/Bbsd68NmqT",
   },
-  {
-    id: "social-media-4",
-    icon: linkedin,
-    link: "https://www.linkedin.com/",
-  },
+
 ];

@@ -4,6 +4,9 @@ import { close, valorantlogo, menu, riotlogo } from "../../assets";
 import { navLinks } from "../../constants";
 import styles from "../../style";
 import { Link } from "react-router-dom";
+import { ShoppingCart } from "phosphor-react";
+import { Logo } from "../../assets";
+
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -16,11 +19,11 @@ const Navbar = () => {
         >
           <div className={`${styles.flexCenter} h-[80px]`}>
             <Link to="/">
-              <div className={`${styles.flexCenter} h-[80px] sm:ml-4 ml-10`}>
+              <div className={`${styles.flexCenter} h-[80px] sm:ml-5 ml-10`}>
                 <img
-                  src={valorantlogo}
+                  src={Logo}
                   alt="valorant"
-                  className="relative w-[38px] h-[26px]"
+                  className="relative w-[58px] h-[50px]"
                 />
               </div>
             </Link>
@@ -31,9 +34,8 @@ const Navbar = () => {
               {navLinks.map((navLink, index) => (
                 <li
                   key={navLink.id}
-                  className={`font-poppins font-normal relative cursor-pointer text-center text-[13px] hover:bg-[gray]/40 px-4 py-2 rounded-[8px] uppercase ${
-                    index === navLinks.length - 1 ? "mr-0" : "mr-6"
-                  } text-white`}
+                  className={`font-poppins font-normal relative cursor-pointer text-center text-[13px] hover:bg-[gray]/40 px-4 py-2 rounded-[8px] uppercase ${index === navLinks.length - 1 ? "mr-0" : "mr-6"
+                    } text-white`}
                 >
                   {navLink.id.length > 1 && navLink.id[1] === "#" ? (
                     <a href={`${navLink.id}`} className=" h-[80px]">
@@ -50,9 +52,11 @@ const Navbar = () => {
           </div>
           <div className="mr-4">
             <div className="flex justify-end items-center">
-              <div id="navbutton" className="md:flex hidden">
-                PLAY NOW
-              </div>
+              <Link to="/cart">
+                <div id="navbutton" className="md:flex hidden">
+                  <button><ShoppingCart size={20} /></button>
+                </div>
+              </Link>
               <div className="md:hidden  block bg-[gray]/40 rounded-full w-[48px] h-[48px] p-2">
                 <img
                   src={menu}
@@ -113,9 +117,13 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="text-center font-semibold mt-8 p-4 flex justify-center bg-primary rounded-[12px] cursor-pointer">
-                <div className="text-[16px]">PLAY NOW</div>
-              </div>
+              {/* <div href="/cart" className="text-center font-semibold mt-8 p-4 flex justify-center bg-primary rounded-[12px] cursor-pointer">
+                <div href="/cart" className="text-[16px]">Cart</div>
+              </div> */}
+              <Link to="/cart" className="text-center font-semibold mt-8 p-4 flex justify-center bg-primary rounded-[12px] cursor-pointer">
+                <div className="text-[16px]">Cart</div>
+              </Link>
+
             </div>
           </div>
         </div>
