@@ -22,7 +22,12 @@ const Hero = () => (
           />
         </div>
       </div>
-      
+      <button className="btn">
+        <span className="btn__inner">
+          <span className="btn__slide"></span>
+          <span className="btn__content">PLAY NOW</span>
+        </span>
+      </button>
     </div>
     <video
       autoPlay

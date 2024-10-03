@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import { close, logo, menu, riotlogo } from "../../assets";
+import { close, valorantlogo, menu, riotlogo } from "../../assets";
 import { navLinks } from "../../constants";
 import styles from "../../style";
 import { Link } from "react-router-dom";
@@ -18,9 +18,9 @@ const Navbar = () => {
             <Link to="/">
               <div className={`${styles.flexCenter} h-[80px] sm:ml-4 ml-10`}>
                 <img
-                  src={logo}
+                  src={valorantlogo}
                   alt="valorant"
-                  className="relative w-[58px] h-[56px]"
+                  className="relative w-[38px] h-[26px]"
                 />
               </div>
             </Link>
@@ -50,7 +50,9 @@ const Navbar = () => {
           </div>
           <div className="mr-4">
             <div className="flex justify-end items-center">
-              
+              <div id="navbutton" className="md:flex hidden">
+                PLAY NOW
+              </div>
               <div className="md:hidden  block bg-[gray]/40 rounded-full w-[48px] h-[48px] p-2">
                 <img
                   src={menu}
@@ -78,7 +80,7 @@ const Navbar = () => {
                       className={`${styles.flexCenter} h-[80px] md:ml-4 ml-10`}
                     >
                       <img
-                        src={logo}
+                        src={valorantlogo}
                         alt="valorant"
                         className="relative w-[38px] h-[26px]"
                       />
@@ -111,7 +113,9 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              
+              <div className="text-center font-semibold mt-8 p-4 flex justify-center bg-primary rounded-[12px] cursor-pointer">
+                <div className="text-[16px]">PLAY NOW</div>
+              </div>
             </div>
           </div>
         </div>
