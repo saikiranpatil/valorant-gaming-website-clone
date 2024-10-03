@@ -43,6 +43,12 @@ import product42 from "./assets/products/9000a.jpg";
 import product43 from "./assets/products/15000.jpg";
 import product44 from "./assets/products/5500.jpg"
 import product45 from "./assets/products/5500a.jpg"
+import product46 from "./assets/products/n1500.jpg";
+import product47 from "./assets/products/n2400.jpg";
+import product48 from "./assets/products/n4200.jpg";
+import product49 from "./assets/products/n10000.jpg";
+
+
 
 export const PRODUCTS = [
   {
@@ -269,5 +275,25 @@ export const PRODUCTS = [
     id: 45,
     price: 5500.0,
     productImage: product45,
+  },
+  {
+    id: 46,
+    price: 1500,
+    productImage: product46,
+  },
+  {
+    id: 47,
+    price: 2400.0,
+    productImage: product47,
+  },
+  {
+    id: 48,
+    price: 4200.0,
+    productImage: product48,
+  },
+  {
+    id: 49,
+    price: 10000.0,
+    productImage: product49,
   },
 ];
