@@ -17,6 +17,7 @@
 }
 
 .cartItem img {
+  margin: 20px;
   width: 200px;
 }
 
@@ -40,4 +41,8 @@
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
+}
+
+.blankCart {
+  height: 400px;
 }

@@ -6,19 +6,32 @@ export const Product = (props) => {
   const { addToCart, cartItems } = useContext(ShopContext);
 
   const cartItemCount = cartItems[id];
+  const  Original = price + 500;
 
   return (
+
+
+
     <div className="product">
       <img src={productImage} />
+      <br />
       <div className="description">
         <p>
           <b>{productName}</b>
         </p>
-        <p> ${price}</p>
+        <span className="original-price">₹{Original}</span>
+          <span className="discounted-price"> ₹{price}</span>
       </div>
-      <button className="addToCartBttn" onClick={() => addToCart(id)}>
-        Add To Cart {cartItemCount > 0 && <> ({cartItemCount})</>}
+      <button className="btn mt-16" onClick={() => addToCart(id)}>
+        <span className="btn__inner">
+          <span className="btn__slide"></span>
+          <span className="btn__content text-secondary">
+            ADD TO CART {cartItemCount > 0 && <> ({cartItemCount})</>}
+          </span>
+        </span>
       </button>
     </div>
   );
 };
+
+
