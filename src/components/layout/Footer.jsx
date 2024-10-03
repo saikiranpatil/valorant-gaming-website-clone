@@ -27,9 +27,7 @@ const Footer = () => (
       </ul>
     </div>
     <div className={`py-4 ${styles.flexCenter}`}>
-      <a href="#">
-        <img src={riotlogogray} alt="riot" />
-      </a>
+     
     </div>
     <div className="mx-auto text-center max-w-[640px]">
       <p className="mx-auto text-[#7e7e7e] text-[13px]">
