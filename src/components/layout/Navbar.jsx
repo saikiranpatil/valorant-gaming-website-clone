@@ -116,9 +116,13 @@ const Navbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="text-center font-semibold mt-8 p-4 flex justify-center bg-primary rounded-[12px] cursor-pointer">
-                <div className="text-[16px]">PLAY NOW</div>
-              </div>
+              {/* <div href="/cart" className="text-center font-semibold mt-8 p-4 flex justify-center bg-primary rounded-[12px] cursor-pointer">
+                <div href="/cart" className="text-[16px]">Cart</div>
+              </div> */}
+              <Link to="/cart" className="text-center font-semibold mt-8 p-4 flex justify-center bg-primary rounded-[12px] cursor-pointer">
+                <div className="text-[16px]">Cart</div>
+              </Link>
+
             </div>
           </div>
         </div>

@@ -9,8 +9,13 @@ import instagram from "./instagram.svg";
 import linkedin from "./linkedin.svg";
 import twitter from "./twitter.svg";
 import overviewimg from "./overview.jpg";
+import WhatsApp from "./WhatsApp.svg"
+import Discord from "./discord.svg"
 
+ 
 export {
+  WhatsApp,
+  Discord,
   valorantlogo,
   valoranttext,
   riotlogo,
