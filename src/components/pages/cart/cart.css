@@ -1,0 +1,69 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cartItem {
+  width: 700px;
+  height: 260px;
+  display: flex;
+
+  align-items: center;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  margin: 30px;
+}
+
+.cartItem img {
+  margin: 30px;
+  width: 400px;
+}
+
+.cartItem .description {
+  width: 100%;
+  font-size: 30px;
+}
+
+.countHandler input {
+  width: 40px;
+  text-align: center;
+  font-weight: bolder;
+}
+
+.checkout button {
+  width: 150px;
+  height: 50px;
+  background-color: rgb(19, 19, 19);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.blankCart {
+  height: 400px;
+}
+
+.subtotal {
+  font-size: xx-large;
+}
+
+.delete {
+  font-size: 20px;
+  color: red;
+}
+
+.delete button {
+  display: flex;
+  align-items: center; /* Aligns icon and text vertically */
+  gap: 1px; /* Adds space between the icon and the text */
+}
+
+.delete button svg {
+  margin-right: 5px; /* Optional: Adds some space between the icon and text */
+}
+
+
