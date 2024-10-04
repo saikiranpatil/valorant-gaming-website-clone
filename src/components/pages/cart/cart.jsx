@@ -6,15 +6,26 @@ import { useNavigate } from "react-router-dom";
 
 import "./cart.css";
 export const Cart = () => {
-  const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
   
 
-  const whatsapp = () => {
-    const url = `https://wa.me/${918511037477}`;
-    window.open(url, "_blank");
 
+  const whatsapp = () => {
+    // Collecting the product IDs from the cart
+    const productIdsInCart = PRODUCTS.filter((product) => cartItems[product.id] > 0)
+                                      .map((product) => product.id);
+                                      
+    // Create the WhatsApp message
+    const message = `Hello, I would like to place an order for product IDs: ${productIdsInCart.join(', ')}. Subtotal: ₹${totalAmount}`;
+    
+    // Encode and open WhatsApp link
+    const url = `https://wa.me/918511037477?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
   };
+  
+
+  
 
   const navigate = useNavigate();
 
