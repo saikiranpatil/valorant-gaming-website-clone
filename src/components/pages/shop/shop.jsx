@@ -1,24 +1,26 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { PRODUCTS } from "../../products";
 import { Product } from "./product";
 import RangeSlider from 'react-range-slider-input';
-import 'react-range-slider-input/dist/style.css'; // Import slider styles
-import './shop.css'; // Import your custom styles
+import 'react-range-slider-input/dist/style.css'; 
+import './shop.css'; 
 
 export const Shop = () => {
   // Slider values for min and max price range
   const [priceRange, setPriceRange] = useState([0, 15000]);
 
-  const handlePriceFilter = () => {
-    setFilteredProducts(
-      PRODUCTS.filter(
-        (product) =>
-          product.price >= priceRange[0] && product.price <= priceRange[1]
-      )
-    );
-  };
-
+  // State to hold filtered products
   const [filteredProducts, setFilteredProducts] = useState(PRODUCTS);
+
+  // useEffect to automatically filter and sort products when priceRange changes
+  useEffect(() => {
+    const filteredAndSortedProducts = PRODUCTS.filter(
+      (product) =>
+        product.price >= priceRange[0] && product.price <= priceRange[1]
+    ).sort((a, b) => a.price - b.price); // Sorting by price in ascending order
+
+    setFilteredProducts(filteredAndSortedProducts);
+  }, [priceRange]); // Runs whenever priceRange changes
 
   return (
     <div className="shop">
@@ -42,14 +44,6 @@ export const Shop = () => {
             rangeSlideDisabled={false} // Enable range selection
           />
         </div>
-      <button className="btn mt-16" onClick={handlePriceFilter}>
-        <span className="btn__inner">
-          <span className="btn__slide"></span>
-          <span className="btn__content text-secondary">
-            Apply Filter
-          </span>
-        </span>
-      </button>
       </div>
 
       {/* Display filtered products */}
