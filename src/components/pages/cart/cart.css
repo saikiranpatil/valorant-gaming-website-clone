@@ -50,3 +50,20 @@
 .subtotal {
   font-size: xx-large;
 }
+
+.delete {
+  font-size: 20px;
+  color: red;
+}
+
+.delete button {
+  display: flex;
+  align-items: center; /* Aligns icon and text vertically */
+  gap: 1px; /* Adds space between the icon and the text */
+}
+
+.delete button svg {
+  margin-right: 5px; /* Optional: Adds some space between the icon and text */
+}
+
+
