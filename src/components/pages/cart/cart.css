@@ -7,18 +7,18 @@
 
 .cartItem {
   width: 700px;
-  height: 250px;
+  height: 260px;
   display: flex;
 
   align-items: center;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
-  border-radius: 25px;
+  border-radius: 8px;
   margin: 30px;
 }
 
 .cartItem img {
-  margin: 20px;
-  width: 200px;
+  margin: 30px;
+  width: 400px;
 }
 
 .cartItem .description {
@@ -46,3 +46,24 @@
 .blankCart {
   height: 400px;
 }
+
+.subtotal {
+  font-size: xx-large;
+}
+
+.delete {
+  font-size: 20px;
+  color: red;
+}
+
+.delete button {
+  display: flex;
+  align-items: center; /* Aligns icon and text vertically */
+  gap: 1px; /* Adds space between the icon and the text */
+}
+
+.delete button svg {
+  margin-right: 5px; /* Optional: Adds some space between the icon and text */
+}
+
+

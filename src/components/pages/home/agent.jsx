@@ -12,11 +12,11 @@ const Agent = () => (
           <div className={`${layout.sectionInfo} relative md:ml-20`}>
             <div className="relative m-width-[25%]">
               <h1 className="pt-8 relative">
-                <div className="relative font-bold md:text-[80px] text-[44px] text-secondary text-black leading-[4rem] md:my-10">
+                <div className="relative text-primary font-bold md:text-[80px] text-[44px] text-black">
                   YOUR AGENTS
                 </div>
               </h1>
-              <h5 className="font-semibold text-secondary mb-8 text-black">
+              <h5 className="font-semibold text-primary mb-8 text-black">
                 CREATIVITY IS YOUR GREATEST WEAPON.
               </h5>
               <span className="text-shadow">
