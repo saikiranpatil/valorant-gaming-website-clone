@@ -33,7 +33,7 @@ export const Cart = () => {
 
       {totalAmount > 0 ? (
         <div>
-          <div>
+          <div className="subtotal">
             <p><b> Subtotal: ₹{totalAmount} </b></p>
           </div>
           <div >
