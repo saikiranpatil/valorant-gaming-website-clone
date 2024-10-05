@@ -31,9 +31,6 @@ const Footer = () => (
     </div>
     <div className="mx-auto text-center max-w-[640px]">
       <p className="mx-auto text-[#7e7e7e] text-[13px]">
-        © 2022 Riot Games, Inc. Riot Games, VALORANT, and any associated logos
-        are trademarks, service marks, and/or registered trademarks of Riot
-        Games, Inc.
       </p>
     </div>
   </div>

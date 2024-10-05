@@ -6,11 +6,11 @@ export const navLinks = [
     title: "Home",
   },
   {
-    id: "/#news",
+    id: "/news",
     title: "News",
   },
   {
-    id: "/",
+    id: "/aboutus",
     title: "About",
   },
   {
@@ -33,21 +33,28 @@ export const news = [
     title: "AGENT COSPLAY GUIDE: HARBOR",
     date: "10/27/22",
     category: "COMMUNITY",
-    imglink: "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltefa41c5a9c334a87/6356e33edc15735d5cd03980/Val_Banner_Harbor_Cosplay_1920x1080_New_Tattoo.jpg?auto=webp&disable=upscale&width=1073"
+    imglink: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d80da40569edce255f709e70b28954f41d39feba-1920x1080.jpg?auto=format&fit=fill&q=80&w=480"
   },
   {
     id: "news-2",
     title: "VALORANT’S PREMIER ALPHA TEST",
     date: "10/26/22",
     category: "ANNOUNCEMENTS",
-    imglink: "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt916477036f3b64c7/63574eaf9a123e5dbdbc61d5/PremierAlpha_Announce_Banner16x9_optimized.jpg?auto=webp&disable=upscale&width=1073"
+    imglink: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d80da40569edce255f709e70b28954f41d39feba-1920x1080.jpg?auto=format&fit=fill&q=80&w=480"
   },
   {
     id: "news-3",
     title: "WHAT’S NEW IN VALORANT EPISODE 5 ACT III",
     date: "10/18/22",
     category: "GAME UPDATES",
-    imglink: "https://images.contentstack.io/v3/assets/bltb6530b271fddd0b1/bltea3dd93cc82f3b59/63484defe9d2c541844df655/VALORANT_2022_EP5-3_Article_Banner_1920x1080_MB01.jpg?auto=webp&disable=upscale&width=1073"
+    imglink: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d80da40569edce255f709e70b28954f41d39feba-1920x1080.jpg?auto=format&fit=fill&q=80&w=480"
+  },
+  {
+    id: "news-4",
+    title: "AGENT COSPLAY GUIDE: HARBOR",
+    date: "10/27/22",
+    category: "COMMUNITY",
+    imglink: "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/d80da40569edce255f709e70b28954f41d39feba-1920x1080.jpg?auto=format&fit=fill&q=80&w=480"
   },
 ]
 
@@ -69,3 +76,44 @@ export const socialMedia = [
   },
 
 ];
+
+export const review = [
+  {
+    id: "1",
+    name: "john doe",
+    image: "",
+    review: "Bought MYS VP,apart from the little delay the service was very fine and clean people are very helpful and trustworthy no second thoughts needed will come back for more offers soon",
+  },
+  {
+    id: "2",
+    name: "Aryan Jadhav",
+    image: "",
+    review: "Very trustworthy person was amazing dealing with them…looking forward for more amazing deals.. you can trust them guys!! They are genuine ❤ bought kuronami vandal account for 2200",
+  },
+  {
+    id: "3",
+    name: "shreyas Gawande",
+    image: "",
+    review: "100 % trusted and legit Most trusted and friendly, I ordered 1165 vp I got 1170 instead 😂 but really fast and legit service🙏🙏",
+  },
+  {
+    id: "4",
+    name: "Aditya Rathod",
+    image: "",
+    review: "“I’ve bought multiple VALORANT accounts from TEAM FURY, and I couldn’t be happier. The prices are unbeatable, and the service is top-notch! The owners are so sweet and helpful, making the whole experience smooth and easy.” ",
+  },
+  {
+    id: "5",
+    name: "Akshit D",
+    image: "",
+    review: "“TEAM FURY is hands down the best place for VALORANT accounts! Affordable prices and exceptional service. The owners were so sweet and answered all my questions without hesitation. Highly recommend them!” ",
+  },
+  {
+    id: "6",
+    name: "Sarvesh mane",
+    image: "",
+    review: "“I was nervous about buying an account online, but TEAM FURY made the process simple and stress-free. The customer service is excellent, and the prices can’t be beat. The owners are so nice and really care about their customers!” ",
+  },
+
+  
+]

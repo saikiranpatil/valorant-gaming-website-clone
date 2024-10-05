@@ -14,6 +14,8 @@
     "phosphor-react": "^1.4.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-intersection-observer": "^9.13.1",
+    "react-range-slider-input": "^3.0.7",
     "react-router-dom": "^6.4.2"
   },
   "devDependencies": {

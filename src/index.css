@@ -4,6 +4,40 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Scrollbar container */
+::-webkit-scrollbar {
+  width: 12px; /* Width of the scrollbar */
+  background-color: #1c1f25; /* Dark background like Valorant's theme */
+}
+
+/* Track (the background of the scrollbar) */
+::-webkit-scrollbar-track {
+  background-color: #1c1f25; /* Dark track background */
+}
+
+/* Thumb (the draggable part of the scrollbar) */
+::-webkit-scrollbar-thumb {
+  background-color: #ff4655; /* Valorant's signature red color */
+  border-radius: 8px; /* Rounded edges for a sleek look */
+  border: 2px solid #0f1923; /* Dark outer border for contrast */
+}
+
+/* Thumb hover effect */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ff5e73; /* Slightly brighter red on hover for interactivity */
+}
+
+/* Thumb active (when clicked) */
+::-webkit-scrollbar-thumb:active {
+  background-color: #ff3141; /* Darker red when clicked */
+}
+
+/* Optional: Customize the scrollbar corner */
+::-webkit-scrollbar-corner {
+  background-color: #0f1923; /* Dark corner background for a seamless look */
+}
+
+
 :root {
   --black-gradient: linear-gradient(144.39deg,
       #ffffff -278.56%,
@@ -225,7 +259,7 @@ nav {
 .btn__inner {
   position: relative;
   display: block;
-  padding: 20px 30px;
+  padding: 20px 0px;
   background-color: var(--button-background-color);
   overflow: hidden;
   box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);
@@ -322,7 +356,7 @@ nav {
 }
 
 #hero::after {
-  background-color: #e6e8e1;
+  background-color: rgba(9, 151, 124, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -351,4 +385,7 @@ select {
 
 select>option{
   font-size: 1.5rem;
+}
+.range-slider {
+  accent-color: red;
 }
