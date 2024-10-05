@@ -12,6 +12,7 @@ import { Cart } from "./pages/cart/cart";
 import Contact from "./pages/contact/Contact";
 import About from "./pages/about/About";
 import News from "./pages/news/News";
+import Reviews from "./pages/reviews/Reviews";
 
 
 
@@ -29,6 +30,7 @@ const App = () => {
             <Route path="/contact" element={<Contact />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/news" element={<News />} />
+            <Route path="/reviews" element={<Reviews />} /> 
             <Route path="*" element={<h1>You Lost In the World of Valorant 😀</h1>} />
           </Routes>
           <Footer />

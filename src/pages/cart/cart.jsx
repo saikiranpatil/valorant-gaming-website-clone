@@ -34,7 +34,7 @@ export const Cart = () => {
       {totalAmount > 0 ? (
         <div>
           <div>
-            <p><b> Subtotal: ₹{totalAmount} </b></p>
+            <p className="text-2xl text-green-500"><b> Subtotal: ₹{totalAmount} </b></p>
           </div>
           <div >
 

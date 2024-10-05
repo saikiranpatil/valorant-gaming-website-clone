@@ -9,7 +9,7 @@
   width: 700px;
   height: 250px;
   display: flex;
-
+  justify-content: space-around;
   align-items: center;
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   border-radius: 25px;
@@ -18,7 +18,9 @@
 
 .cartItem img {
   margin: 20px;
-  width: 200px;
+  width: 400px;
+  border: 2px solid black;
+  border-radius: 15px;
 }
 
 .cartItem .description {

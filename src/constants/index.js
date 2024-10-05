@@ -14,7 +14,7 @@ export const navLinks = [
     title: "About",
   },
   {
-    id: "/",
+    id: "/reviews",
     title: "Review",
   },
   {
@@ -77,7 +77,7 @@ export const socialMedia = [
 
 ];
 
-export const review = [
+export const reviews = [
   {
     id: "1",
     name: "john doe",
@@ -114,6 +114,44 @@ export const review = [
     image: "",
     review: "“I was nervous about buying an account online, but TEAM FURY made the process simple and stress-free. The customer service is excellent, and the prices can’t be beat. The owners are so nice and really care about their customers!” ",
   },
+  {
+    id: "6",
+    name: "Sandesh bramhane",
+    image: "https://i.redd.it/i-swiped-up-on-this-guys-instagram-story-with-the-message-v0-34kcutxi8geb1.jpg?width=1170&format=pjpg&auto=webp&s=a295640a193f5e1ba9234e6ab566e78e0648f3af",
+    // review: "“I was nervous about buying an account online, but TEAM FURY made the process simple and stress-free. The customer service is excellent, and the prices can’t be beat. The owners are so nice and really care about their customers!” ",
+  },
 
   
 ]
+export const homePageReview = [
+  {
+    id: "1",
+    name: "Devin Joe",
+    words: "I recently purchased an account from TEAM FURY, and I couldn't be more thrilled! The transaction was smooth, and the support team was incredibly helpful. They answered all my questions promptly and made me feel at ease throughout the process. Highly recommend!",
+  },
+  {
+    id: "2",
+    name: "Emily Chen",
+    words: "Buying my VALORANT account from TEAM FURY was a fantastic experience! The account was exactly as described, and I received it within hours. The professionalism and dedication of the team are truly commendable. I will definitely return for more!",
+  },
+  {
+    id: "3",
+    name: "Alex Johnson",
+    words: "TEAM FURY exceeded my expectations! I was hesitant at first about purchasing an account online, but their customer service was top-notch. I got a great deal, and the account quality is unmatched. I can't wait to dive into my new VALORANT adventures!",
+  },
+  {
+    id: "4",
+    name: "Samantha Lee",
+    words: "What an amazing service! The staff at TEAM FURY are not only knowledgeable but also incredibly friendly. They helped me pick the perfect account, and their fast delivery was a pleasant surprise. A definite 10/10 for quality and service!",
+  },
+  {
+    id: "5",
+    name: "Michael Smith",
+    words: "I’m so glad I found TEAM FURY! The entire process from start to finish was seamless. They provide a great selection of accounts, and the support team was there for me every step of the way. I highly recommend them for anyone looking to enhance their gaming experience!",
+  },
+  {
+    id: "6",
+    name: "Ava Martinez",
+    words: "TEAM FURY is simply the best! I purchased a VALORANT account and was impressed by the quick service and the reliability of the account. The entire experience was enjoyable, and I will definitely be recommending them to my friends!",
+  },
+];

@@ -9,6 +9,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroicons/react": "^2.1.5",
     "axios": "^1.6.0",
     "bootstrap": "^5.3.3",
     "phosphor-react": "^1.4.1",

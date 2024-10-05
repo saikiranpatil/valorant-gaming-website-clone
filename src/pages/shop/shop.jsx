@@ -14,19 +14,29 @@ export const Shop = () => {
     threshold: 1.0,
   });
   const [filteredProducts, setFilteredProducts] = useState(PRODUCTS);
+  
+  // State for sorting
+  const [sortOption, setSortOption] = useState("default"); // "default", "priceAsc", "priceDesc"
 
   const hasMoreProducts = visibleProducts < filteredProducts.length;
 
-  // Filter products based on the price range
+  // Filter products based on the price range and sort them
   useEffect(() => {
     const filteredAndSortedProducts = PRODUCTS.filter(
       (product) =>
         product.price >= priceRange[0] && product.price <= priceRange[1]
-    ).sort((a, b) => a.price - b.price); // Sorting by price in ascending order
+    );
+
+    // Sort products based on the selected sort option
+    if (sortOption === "priceAsc") {
+      filteredAndSortedProducts.sort((a, b) => a.price - b.price); // Sorting by price ascending
+    } else if (sortOption === "priceDesc") {
+      filteredAndSortedProducts.sort((a, b) => b.price - a.price); // Sorting by price descending
+    }
 
     setFilteredProducts(filteredAndSortedProducts);
-    setVisibleProducts(6); // Reset visible products when price range changes
-  }, [priceRange]);
+    setVisibleProducts(6); // Reset visible products when price range changes or sorting option changes
+  }, [priceRange, sortOption]);
 
   // Load more products on scroll when inView
   useEffect(() => {
@@ -49,6 +59,11 @@ export const Shop = () => {
     setPriceRange(value);
   };
 
+  // Handle sorting option change
+  const handleSortChange = (sortby) => {
+    setSortOption(sortby);
+  };
+
   return (
     <div className="shop min-h-screen flex flex-col justify-center items-center">
       <div className="shopTitle text-center">
@@ -60,8 +75,8 @@ export const Shop = () => {
       {/* Range Slider for selecting price range */}
       <div className="price-filter flex flex-col justify-center items-center my-4">
         <label className="text-xl font-bold m-5 text-red-500">
-            Price Range: ₹{priceRange[0]} - ₹{priceRange[1]}
-          </label>
+          Price Range: ₹{priceRange[0]} - ₹{priceRange[1]}
+        </label>
         <RangeSlider
           min={0}
           max={15000}
@@ -71,6 +86,29 @@ export const Shop = () => {
           thumbsDisabled={[false, false]} // Both ends can be moved
           rangeSlideDisabled={false} // Enable range selection
         />
+      </div>
+
+      {/* Sort By Buttons */}
+      <div className="sort-by my-4 absolute top-[42%] right-[5px]">
+        <label className="text-xl font-bold mr-2 text-red-500">Sort By:</label>
+        <button
+          onClick={() => handleSortChange("default")}
+          className={`p-1 ml-2 border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "default" ? "bg-red-500" : ""}`}
+        >
+          Default
+        </button>
+        <button
+          onClick={() => handleSortChange("priceAsc")}
+          className={`p-1 ml-2 border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceAsc" ? "bg-red-500" : ""}`}
+        >
+          Low To High
+        </button>
+        <button
+          onClick={() => handleSortChange("priceDesc")}
+          className={`p-1 ml-2 border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceDesc" ? "bg-red-500" : ""}`}
+        >
+          High To Low
+        </button>
       </div>
 
       <div className="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">

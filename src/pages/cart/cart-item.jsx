@@ -8,19 +8,19 @@ export const CartItem = (props) => {
 
   return (
     <div className="cartItem">
-      <img src={productImage} />
-      <div className="description">
-        <p>
+      <img src={productImage} alt={productName} className="w-full h-auto rounded-lg" />
+      <div className="description mt-4">
+        <p className="text-lg font-semibold">
           <b>{productName}</b>
         </p>
-        <p> Price: ₹{price}</p>
-        <div className="countHandler">
-          <button onClick={() => removeFromCart(id)}> - </button>
-          <input
-            value={cartItems[id]}
-            onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
-          />
-          <button onClick={() => addToCart(id)}> + </button>
+        <p className="text-green-500 text-base text-[25px] font-bold p-2 m-2">Price: ₹{price}</p>
+        <div className="countHandler p-2 m-2">
+          <button
+            onClick={() => removeFromCart(id)}
+            className="bg-red-500 text-white p-2 m-2 rounded-md hover:bg-red-600 transition duration-300 ease-in-out text-sm"
+          >
+            Remove from Cart
+          </button>
         </div>
       </div>
     </div>
