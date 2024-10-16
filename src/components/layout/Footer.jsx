@@ -20,13 +20,14 @@ const Footer = () => {
       <div className="flex justify-center align-center p-8">
         <ul className="flex sm:flex-row flex-col justify-center align-center">
           <li className="font-poppins font-semibold transition-all ease-in duration-300 relative cursor-pointer text-center text-[13px] hover:bg-[gray]/40 px-4 py-2 rounded-[8px] uppercase mr-6 text-white">
-            <a href="#">PRIVACY NOTICE</a>
+            <a href="#" onClick={() => navigate("/privacy")}>PRIVACY NOTICE</a>
           </li>
           <li className="font-poppins font-semibold transition-all ease-in duration-300 relative cursor-pointer text-center text-[13px] hover:bg-[gray]/40 px-4 py-2 rounded-[8px] uppercase mr-6 text-white">
             <a href="#" onClick={() => navigate("/TermsAndServices")}>TERMS OF SERVICE</a>
           </li>
           <li className="font-poppins font-semibold transition-all ease-in duration-300 relative cursor-pointer text-center text-[13px] hover:bg-[gray]/40 px-4 py-2 rounded-[8px] uppercase mr-6 text-white">
-            <a href="#">COOKIE PREFERENCES</a>
+           {/* <a href="#"> onClick={() => navigate("/CookiePreference")}>COOKIE PREFERENCES</a> */}
+            <a href="#" onClick={() => navigate("/CookiePreference")}>COOKIE PREFERENCES</a>
           </li>
         </ul>
       </div>
