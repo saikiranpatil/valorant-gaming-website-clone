@@ -38,19 +38,48 @@ const Blog = () => {
         Remember, every player was a beginner once. With dedication and practice, you'll find yourself climbing the ranks and enjoying all that Valorant has to offer!
       `,
     },
+    {
+      title: 'Valorant Game Sense & Aiming: Mastering the Art of Competitive Play 🎯',
+      date: 'October 16, 2024',
+      author: 'Sandesh Bramhane',
+      content: `
+        In Valorant, climbing the ranks isn't just about aiming better—it’s about mastering your game sense and strategic play. While flashy kills and highlight-worthy moments are great, consistency in decision-making and sharpening your mechanics will take your gameplay to the next level. Ready to dominate? Let’s dive into some essential tips to elevate your game sense and aiming skills! 💥
+
+        1. 🧠 **Develop Your Game Sense**: 
+        Game sense is your ability to predict enemy moves, make smart plays, and always be one step ahead. Here’s how to refine it:
+        - Map Awareness: Know the maps like the back of your hand.
+        - Economy Management: Learn when to save or force-buy.
+        - Crosshair Placement: Always keep your crosshair at head level.
+
+        2. 🎯 **Aiming Training: The Path to Precision**:
+        Improving aim takes dedication. Use tools like Aim Lab or Valorant's shooting range to perfect your mechanics.
+
+        3. 💪 **Keep the Right Mentality**:
+        Valorant can be mentally challenging. Stay positive, learn from your losses, and avoid tilt!
+      `,
+    },
   ];
 
   return (
-    <div className="blog bg-dark-gradient text-white py-10 px-5 lg:px-20">
-      <h1 className="text-center text-4xl text-red-500 font-bold mb-10">Valorant ID Marketplace Blog</h1>
-      <div className="space-y-8">
+    <div className="blog bg-gradient-to-b from-gray-900 to-black text-white py-10 px-5 lg:px-20">
+      <h1 className="text-center text-3xl sm:text-5xl text-red-500 font-extrabold mb-8 sm:mb-14 tracking-widest uppercase">
+        Valorant ID Marketplace Blog
+      </h1>
+      <div className="space-y-8 sm:space-y-10">
         {blogPosts.map((post, index) => (
-          <div key={index} className="bg-gray-800 p-5 rounded-lg shadow-md">
-            <h2 className="text-2xl text-red-500 font-semibold mb-2">{post.title}</h2>
-            <p className="text-gray-400 text-sm mb-2">
+          <div
+            key={index}
+            className="bg-gray-800 p-5 sm:p-8 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-500 ease-in-out"
+          >
+            <h2 className="text-xl sm:text-3xl text-red-500 font-bold mb-2 sm:mb-4">
+              {post.title}
+            </h2>
+            <p className="text-gray-400 text-xs sm:text-sm mb-4">
               By {post.author} | {post.date}
             </p>
-            <p className="text-lg">{post.content}</p>
+            <p className="text-sm sm:text-lg leading-relaxed whitespace-pre-line">
+              {post.content}
+            </p>
           </div>
         ))}
       </div>
