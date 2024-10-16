@@ -37,7 +37,7 @@ const Contact = () => {
         </div>
       </div>
       <div>
-        <form action="https://formsubmit.co/nocap7884@gmail.com" method="POST" className="max-w-lg mx-auto p-6 bg-gray-900 text-white">
+        <form action="https://formsubmit.co/mrfsociety1010@gmail.com" method="POST" className="max-w-lg mx-auto p-6 bg-gray-900 text-white">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             <div>
               <label className="block text-sm font-bold mb-2">Name *</label>
