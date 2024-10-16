@@ -19,7 +19,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-row items-center justify-around items-center min-h-screen bg-gray-900 text-white p-4">
+    <div className="flex sm:flex-row flex-col items-center justify-around items-center min-h-screen bg-gray-900 text-white p-4">
       <div className='flex flex-col justify-center items-center'>
         <div>
           <img src={logo} className='w-[170px] mb-5 rounded-2xl' alt="" />
