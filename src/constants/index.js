@@ -25,6 +25,10 @@ export const navLinks = [
     id: "/contact",
     title: "Contact Us",
   },
+  {
+    id: "/blogs",
+    title: "Blog",
+  },
 ];
 
 export const news = [
@@ -92,7 +96,7 @@ export const reviews = [
   },
   {
     id: "3",
-    name: "shreyas Gawande",
+    name: "Shreyash Gawande",
     image: "",
     review: "100 % trusted and legit Most trusted and friendly, I ordered 1165 vp I got 1170 instead 😂 but really fast and legit service🙏🙏",
   },
@@ -104,7 +108,7 @@ export const reviews = [
   },
   {
     id: "5",
-    name: "Akshit D",
+    name: "Akshit ",
     image: "",
     review: "“TEAM FURY is hands down the best place for VALORANT accounts! Affordable prices and exceptional service. The owners were so sweet and answered all my questions without hesitation. Highly recommend them!” ",
   },

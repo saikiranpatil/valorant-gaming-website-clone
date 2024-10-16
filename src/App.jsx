@@ -16,6 +16,7 @@ import Reviews from "./pages/reviews/Reviews";
 import TermsAndServices from "./pages/about/TermsAndServices";
 import PrivacyNotes from "./pages/about/privacy";
 import CookiePreference from "./pages/about/cokkie";
+import Blog from "./components/pages/home/Blog"
 
 
 
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/TermsAndServices" element={<TermsAndServices/>} /> 
             <Route path="/privacy" element={<PrivacyNotes/>} /> 
             <Route path="/CookiePreference" element={<CookiePreference/>} /> 
+            <Route path="/blogs" element={<Blog />}/>
            
             <Route path="*" element={<h1>You Lost In the World of Valorant 😀</h1>} />
           </Routes>
