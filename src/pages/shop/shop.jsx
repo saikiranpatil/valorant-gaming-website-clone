@@ -65,16 +65,16 @@ export const Shop = () => {
   };
 
   return (
-    <div className="shop min-h-screen flex flex-col justify-center items-center">
+    <div className="shop p-6 min-h-screen flex flex-col justify-center items-center">
       <div className="shopTitle text-center">
-        <h1 className="font-poppins font-normal text-5xl font-bold text-[#FF4655] m-8 p-12">
+        <h1 className="font-poppins font-normal sm:text-5xl text-3xl font-bold text-[#FF4655] m-8 p-12">
           PRODUCT SHOP
         </h1>
       </div>
 
       {/* Range Slider for selecting price range */}
       <div className="price-filter flex flex-col justify-center items-center my-4">
-        <label className="text-xl font-bold m-5 text-red-500">
+        <label className="sm:text-xl text-md font-bold m-5 text-red-500">
           Price Range: ₹{priceRange[0]} - ₹{priceRange[1]}
         </label>
         <RangeSlider
@@ -89,23 +89,23 @@ export const Shop = () => {
       </div>
 
       {/* Sort By Buttons */}
-      <div className="sort-by my-4 absolute top-[42%] right-[5px]">
-        <label className="text-xl font-bold mr-2 text-red-500">Sort By:</label>
+      <div className="p-6 sort-by my-4 absolute top-[42%] right-[5px]">
+        <label className="sm:text-xl text-sm font-bold mr-2 text-red-500">Sort By:</label>
         <button
           onClick={() => handleSortChange("default")}
-          className={`p-1 ml-2 border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "default" ? "bg-red-500" : ""}`}
+          className={`p-1 ml-2 sm:text-xl text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "default" ? "bg-red-500" : ""}`}
         >
           Default
         </button>
         <button
           onClick={() => handleSortChange("priceAsc")}
-          className={`p-1 ml-2 border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceAsc" ? "bg-red-500" : ""}`}
+          className={`p-1 ml-2 sm:text-xl text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceAsc" ? "bg-red-500" : ""}`}
         >
           Low To High
         </button>
         <button
           onClick={() => handleSortChange("priceDesc")}
-          className={`p-1 ml-2 border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceDesc" ? "bg-red-500" : ""}`}
+          className={`p-1 ml-2 sm:text-xl text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceDesc" ? "bg-red-500" : ""}`}
         >
           High To Low
         </button>

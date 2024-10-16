@@ -11,8 +11,8 @@ const News = () => {
                     <h1 className="relative text-blue-500 font-bold md:text-[80px] text-[44px]">
                         THE LATEST <span className='text-primary'>NEWS</span>
                     </h1>
-                    <div className='flex justify-around items-center'>
-                        <div className="all-news grid grid-cols-2 gap-y-6 overflow-x-hidden">
+                    <div className='flex justify-evenly items-center'>
+                        <div className="all-news flex flex-row flex-wrap sm:gap-y-6 overflow-x-hidden">
                             {news.map((newsItem) => (
                                 <NewsCard
                                     key={newsItem.id}
