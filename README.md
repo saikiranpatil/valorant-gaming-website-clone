@@ -1,8 +1,26 @@
-# Valorant Website Clone
-Valorant Website Clone using data from Valorant-API.
-### Demo
-https://user-images.githubusercontent.com/84263946/210807232-155ac77c-c83c-4f0d-996b-ebe9ee7e7393.mp4
-### References
-* [Build and Deploy a Fully Responsive Website: Javascript Mastery](https://www.youtube.com/watch?v=_oO4Qi5aVZs&t=521s)
-* [Valorant Official Site](https://playvalorant.com/en-gb/)
-* [Tailwind CSS Docs](https://tailwindcss.com/)
+# 🎯 Valorant ID Marketplace 💥
+
+Welcome to the **Valorant ID Marketplace**! 🎮 This platform allows users to securely buy and sell Valorant accounts. We provide a seamless experience for both sellers and buyers, ensuring **secure transactions**, **account verifications**, and **premium customer service**. 🔒✨
+
+## 📑 Table of Contents
+- [🔥 Features](#-features)
+- [⚙️ Installation](#-installation)
+- [🚀 Usage](#-usage)
+- [🛠️ Technologies Used](#-technologies-used)
+- [🤝 Contributing](#-contributing)
+- [📜 License](#-license)
+- [📧 Contact](#-contact)
+
+## 🔥 Features
+- 🔐 **Secure account listings** for sellers
+- ✅ Verified and **legitimate** Valorant accounts
+- 💸 **Smooth and secure transactions**
+- 🎨 **Valorant-themed UI** for an immersive experience
+- 💼 No hidden fees, **transparency guaranteed**
+- 🛡️ **Anti-fraud protection** for both buyers and sellers
+- 📞 **24/7 customer support** for queries and assistance
+
+## ⚙️ Installation
+1. Clone this repository to your local machine using:
+   ```bash
+   git clone https://github.com/sandesh362/valorant--website-.git
