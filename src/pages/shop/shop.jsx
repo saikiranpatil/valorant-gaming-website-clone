@@ -35,7 +35,7 @@ export const Shop = () => {
     }
 
     setFilteredProducts(filteredAndSortedProducts);
-    setVisibleProducts(6); // Reset visible products when price range changes or sorting option changes
+    setVisibleProducts(6); // Reset visible products when price range or sort option changes
   }, [priceRange, sortOption]);
 
   // Load more products on scroll when inView
@@ -67,7 +67,7 @@ export const Shop = () => {
   return (
     <div className="shop p-6 min-h-screen flex flex-col justify-center items-center">
       <div className="shopTitle text-center">
-        <h1 className="font-poppins font-normal sm:text-5xl text-3xl font-bold text-[#FF4655] m-8 p-12">
+        <h1 className="font-poppins font-normal text-5xl font-bold text-[#FF4655] m-8 p-12">
           PRODUCT SHOP
         </h1>
       </div>
@@ -82,9 +82,10 @@ export const Shop = () => {
           max={15000}
           step={3000}
           value={priceRange}
-          onInput={setPriceRange}
+          onInput={handlePriceRangeChange}
           thumbsDisabled={[false, false]} // Both ends can be moved
           rangeSlideDisabled={false} // Enable range selection
+          className="z-0"
         />
       </div>
 

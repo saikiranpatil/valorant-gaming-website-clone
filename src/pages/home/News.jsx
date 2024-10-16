@@ -8,7 +8,7 @@ const News = () => (
   <div className={`bg-black ${styles.paddingX} ${styles.flexStart}`}>
     <div className={`${styles.boxWidth} sm:py-6 py-4`}>
       <section id="news" className="mx-4">
-        <h1 className="relative text-[#FF4655] font-bold md:text-[80px] sm:text-[44px] text-center mb-8">
+        <h1 className="relative text-[#FF4655] font-bold md:text-[80px] sm:text-xl text-[30px] text-center mb-8">
           THE LATEST
         </h1>
         <div className="all-news flex sm:flex-row flex-col overflow-x-scroll none overflow-y-hidden scrollbar-hidden">
