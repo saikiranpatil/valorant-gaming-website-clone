@@ -26,7 +26,7 @@ export const Product = (props) => {
 
   return (
     <div className="product-card bg-[#292929] shadow-lg hover:shadow-2xl rounded-lg p-4 transition-all duration-300 ease-in-out">
-      <img src={productImage} alt={productName} className="w-full h-64 object-cover rounded-md mb-4" />
+      <img src={productImage} alt={productName} className="w-full object-scale-down rounded-md mb-4" />
       <div className="product-info">
         <h2 className="font-semibold text-lg text-gray-800 text-center">{productName}</h2>
         <div className="flex justify-center items-center mt-2">
@@ -38,7 +38,7 @@ export const Product = (props) => {
         <button className="btn" onClick={handleButtonClick}>
           <span className="btn__inner">
             <span className="btn__slide"></span>
-            <span className={`btn__content text-secondary ${cartItemCount > 0 ? "bg-[#131313]": ""}`}>
+            <span className={`btn__content text-secondary sm:text-xl text-[10px] ${cartItemCount > 0 ? "bg-[#131313]": ""}`}>
               {cartItemCount > 0 ? "REMOVE" : "ADD TO CART"}
               {cartItemCount > 0 && <> ({cartItemCount})</>}
             </span>

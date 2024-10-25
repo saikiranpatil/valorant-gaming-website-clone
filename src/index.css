@@ -259,7 +259,7 @@ nav {
 .btn__inner {
   position: relative;
   display: block;
-  padding: 20px 0px;
+  padding: 10px 0px;
   background-color: var(--button-background-color);
   overflow: hidden;
   box-shadow: inset 0px 0px 0px 1px var(--button-inner-border-color);

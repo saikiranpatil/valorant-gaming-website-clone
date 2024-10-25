@@ -278,7 +278,7 @@ export const PRODUCTS = [
   },
   {
     id: 46,
-    price: 1500,
+    price: 15000,
     productImage: product46,
   },
   {

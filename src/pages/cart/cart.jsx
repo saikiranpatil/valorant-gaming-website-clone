@@ -8,7 +8,7 @@ import "./cart.css";
 export const Cart = () => {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
   const totalAmount = getTotalCartAmount();
-  
+
 
   const whatsapp = () => {
     const url = `https://wa.me/${918511037477}`;
@@ -32,13 +32,13 @@ export const Cart = () => {
       </div>
 
       {totalAmount > 0 ? (
-        <div>
+        <div className="flex flex-col justify-center items-center">
           <div>
             <p className="text-2xl text-green-500"><b> Subtotal: ₹{totalAmount} </b></p>
           </div>
           <div >
 
-            <button className="btn mt-16" onClick={whatsapp}>
+            <button className="btn mt-6" onClick={whatsapp}>
               <span className="btn__inner">
                 <span className="btn__slide"></span>
                 <span className="btn__content text-secondary">
@@ -53,14 +53,14 @@ export const Cart = () => {
 
       ) : (
         <div className="blankCart">
-        <button className="btn mt-16" onClick={() => navigate("/shop")}>
-              <span className="btn__inner">
-                <span className="btn__slide"></span>
-                <span className="btn__content text-secondary">
-                  CONTINUE SHOPPING 
-                </span>
+          <button className="btn mt-16" onClick={() => navigate("/shop")}>
+            <span className="btn__inner">
+              <span className="btn__slide"></span>
+              <span className="btn__content text-secondary">
+                CONTINUE SHOPPING
               </span>
-            </button>
+            </span>
+          </button>
         </div>
       )}
     </div>

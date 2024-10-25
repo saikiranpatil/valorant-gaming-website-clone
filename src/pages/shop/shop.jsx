@@ -14,7 +14,7 @@ export const Shop = () => {
     threshold: 1.0,
   });
   const [filteredProducts, setFilteredProducts] = useState(PRODUCTS);
-  
+
   // State for sorting
   const [sortOption, setSortOption] = useState("default"); // "default", "priceAsc", "priceDesc"
 
@@ -73,46 +73,57 @@ export const Shop = () => {
       </div>
 
       {/* Range Slider for selecting price range */}
-      <div className="price-filter flex flex-col justify-center items-center my-4">
-        <label className="sm:text-xl text-md font-bold m-5 text-red-500">
-          Price Range: ₹{priceRange[0]} - ₹{priceRange[1]}
-        </label>
-        <RangeSlider
-          min={0}
-          max={15000}
-          step={3000}
-          value={priceRange}
-          onInput={handlePriceRangeChange}
-          thumbsDisabled={[false, false]} // Both ends can be moved
-          rangeSlideDisabled={false} // Enable range selection
-          className="z-0"
-        />
+      <div className="flex sm:flex-row flex-col w-[100vw] justify-center">
+        <div className="sm:w-[30%] w-0"></div>
+        <div className="price-filter sm:w-[40%] w-[100%] flex flex-col justify-end items-center my-4">
+          <label className="sm:text-xl text-md font-bold m-5 text-red-500">
+            Price Range: ₹{priceRange[0]} - ₹{priceRange[1]}
+          </label>
+          <div className="sm:w-[20rem] w-[70vw]">
+            <RangeSlider
+              min={0}
+              max={15000}
+              step={3000}
+              value={priceRange}
+              onInput={handlePriceRangeChange}
+              thumbsDisabled={[false, false]} // Both ends can be moved
+              rangeSlideDisabled={false} // Enable range selection
+              className="z-0"
+            />
+          </div>
+        </div>
+
+        {/* Sort By Buttons */}
+        <div className="p-6 sort-by sm:w-[30%] w-[100%] my-4">
+          <div className="flex items-center">
+            <div className="">
+              <label className="sm:text-lg text-sm font-bold mr-2 text-red-500 ">Sort By:</label>
+            </div>
+            <div className="wrap">
+              <button
+                onClick={() => handleSortChange("default")}
+                className={`p-1 ml-2 sm:text-md text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "default" ? "bg-red-500" : ""}`}
+              >
+                Default
+              </button>
+              <button
+                onClick={() => handleSortChange("priceAsc")}
+                className={`p-1 ml-2 sm:text-md text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceAsc" ? "bg-red-500" : ""}`}
+              >
+                Low To High
+              </button>
+              <button
+                onClick={() => handleSortChange("priceDesc")}
+                className={`p-1 ml-2 sm:text-md text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceDesc" ? "bg-red-500" : ""}`}
+              >
+                High To Low
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
 
-      {/* Sort By Buttons */}
-      <div className="p-6 sort-by my-4 absolute top-[42%] right-[5px]">
-        <label className="sm:text-xl text-sm font-bold mr-2 text-red-500">Sort By:</label>
-        <button
-          onClick={() => handleSortChange("default")}
-          className={`p-1 ml-2 sm:text-xl text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "default" ? "bg-red-500" : ""}`}
-        >
-          Default
-        </button>
-        <button
-          onClick={() => handleSortChange("priceAsc")}
-          className={`p-1 ml-2 sm:text-xl text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceAsc" ? "bg-red-500" : ""}`}
-        >
-          Low To High
-        </button>
-        <button
-          onClick={() => handleSortChange("priceDesc")}
-          className={`p-1 ml-2 sm:text-xl text-sm border-none rounded-lg text-white shadow-sm hover:bg-red-300 transition duration-200 ${sortOption === "priceDesc" ? "bg-red-500" : ""}`}
-        >
-          High To Low
-        </button>
-      </div>
-
-      <div className="products grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+      <div className="products grid grid-cols-1 sm:grid-cols-2 sm:grid-cols-3 gap-8">
         {filteredProducts.slice(0, visibleProducts).map((product) => (
           <Product key={product.id} data={product} />
         ))}

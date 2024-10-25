@@ -7,22 +7,29 @@ export const CartItem = (props) => {
     useContext(ShopContext);
 
   return (
-    <div className="cartItem">
-      <img src={productImage} alt={productName} className="w-full h-auto rounded-lg" />
-      <div className="description mt-4">
-        <p className="text-lg font-semibold">
-          <b>{productName}</b>
+    <div className="bg-gray-900 w-[90%] sm:w-[30%] p-6 m-6 rounded-xl flex sm:flex-row flex-col shadow-lg transform hover:scale-105 transition duration-300 ease-in-out">
+      <img
+        src={productImage}
+        alt={productName}
+        className="w-full h-auto rounded-lg border-2 border-red-500"
+      />
+      <div className="mt-4 p-4 m-4 ">
+        <p className="text-xl font-bold text-white uppercase tracking-wide">
+          {productName}
         </p>
-        <p className="text-green-500 text-base text-[25px] font-bold p-2 m-2">Price: ₹{price}</p>
-        <div className="countHandler p-2 m-2">
+        <p className="text-green-500 text-3xl font-bold mt-2">
+          Price: ₹{price}
+        </p>
+        <div className="mt-4">
           <button
             onClick={() => removeFromCart(id)}
-            className="bg-red-500 text-white p-2 m-2 rounded-md hover:bg-red-600 transition duration-300 ease-in-out text-sm"
+            className="bg-red-600 text-white text-sm px-2 w-[13rem] py-2 rounded-lg hover:bg-red-700 transition duration-300 ease-in-out uppercase tracking-wider font-semibold"
           >
             Remove from Cart
           </button>
         </div>
       </div>
     </div>
+
   );
 };
