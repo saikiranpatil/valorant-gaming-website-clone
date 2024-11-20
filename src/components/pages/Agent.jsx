@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import styles, { layout } from "../../style";
 import { loadAgents } from "../../constants/scripts";
+import { agentsbgvideo } from "../../assets";
 
 const Agent = () => {
   let { agentName } = useParams();
@@ -22,7 +23,7 @@ const Agent = () => {
 
   return (
     <>
-      <section className="relative flex items-center justify-center h-screen  sm:h-[85vh] h-[60vh] w-[100vw] sm:px-[5%] px-0">
+      <section className="relative flex items-center justify-center h-screen  sm:h-[85vh] h-[60vh] w-[100vw] sm:px-[5%] px-0 bg-[#0f1923] z-[-1]">
         <div className={`relative flex items-end justify-center flex-col w-full h-full`}>
           <div className={`relative flex md:flex-row-reverse flex-col-reverse justify-end items-center`}>
             <div className={`${layout.sectionInfo} relative md:mr-16 max-w-[16rem]`}>
@@ -76,18 +77,14 @@ const Agent = () => {
             </ul>
           </div>
         </div>
-        <video
-          autoPlay
-          loop
-          muted
-          poster="https://images.contentstack.io/v3/assets/b500ltb6530b271fddd0b1/bltbded518020183769/5eb26f5389bac8148a8006cc/agent-background-generic.JPG"
-          className="absolute sm:w-[100vw] h-full object-cover z-[-1]"
+        <div
+          className="absolute sm:w-[100vw] h-full object-cover z-[-1] bg-gradient-to-t from-black/70 to-transparent"
         >
           <source
-            src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt29d7c4f6bc077e9e/5eb26f54402b8b4d13a56656/agent-background-generic.mp4"
+            src={agentsbgvideo}
             type="video/mp4"
           />
-        </video>
+        </div>
         <img
           src={agent.fullPortrait}
           alt="agents"
@@ -119,7 +116,7 @@ const Agent = () => {
           <ul className="relative flex py-4 gap-6 mx-2">
             {agent.abilities.map((ability, index) => (
               <li key={ability.slot} onClick={(e) => setAbilitiesIdx(index)}>
-                <div className={`relative h-[72px] w-[72px] border p-2 cursor-pointer ${index===abilitiesIdx ? "bg-[#000]":"bg-secondary border-[#fff]-500 hover:bg-[#666]"}`}>
+                <div className={`relative h-[72px] w-[72px] border p-2 cursor-pointer ${index===abilitiesIdx ? "bg-[#0f1923]":"bg-[#0f1923]/50 border-[#fff]-500 hover:bg-[#0f1923]/80"}`}>
                   <img
                     src={ability.displayIcon}
                     alt={ability.slot}

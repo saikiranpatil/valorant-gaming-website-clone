@@ -9,7 +9,7 @@ const News = () => (
         <h1 className="relative text-primary font-bold md:text-[80px] text-[44px] text-black">
           THE LATEST
         </h1>
-        <div className="all-news flex flex-row">
+        <div className="all-news flex flex-row overflow-x-scroll">
           {news.map((newsItem) => (
             <NewsCard
               key={newsItem.id}

@@ -2,6 +2,7 @@ import { Link, useNavigate } from "react-router-dom";
 import styles, { layout } from "../../style";
 import React, { useEffect, useState } from "react";
 import { loadAgents } from "../../constants/scripts";
+import { agentsbgvideo } from "../../assets";
 
 const Agents = () => {
   const [agents, setAgents] = useState([]);
@@ -22,7 +23,7 @@ const Agents = () => {
             className={`relative flex md:flex-row-reverse flex-col-reverse justify-end items-center`}
           >
             <div
-              className={`${layout.sectionInfo} relative md:mr-16 max-w-[16rem]`}
+              className={`${layout.sectionInfo} relative md:mr-16 max-w-[16rem] bg-gradient-to-t from-black via-transparent to-black p-4`}
             >
               <div className="relative m-width-[25%] pb-10 border-b border-gray-500 sm:block hidden">
                 <h5 className="font-semibold text-secondary mb-8">
@@ -58,6 +59,18 @@ const Agents = () => {
           alt="agents"
           className="absolute z-[-1] sm:w-[100vw] h-full object-cover"
         ></img>
+        <video
+          autoPlay
+          loop
+          muted
+          poster="https://images.contentstack.io/v3/assets/b500ltb6530b271fddd0b1/bltbded518020183769/5eb26f5389bac8148a8006cc/agent-background-generic.JPG"
+          className="absolute sm:w-[100vw] h-full object-cover z-[-1]"
+        >
+          <source
+            src={agentsbgvideo}
+            type="video/mp4"
+          />
+        </video>
         <img
           src="https://playvalorant.com/static/agents-group-31d7ce5a3637e45d8b25d2fd03159e6c.png"
           alt="agents"
@@ -78,12 +91,12 @@ const Agents = () => {
             </span>
           </div>
           <div className="flex justify-center p-4 relative">
-            <select name="agent" id="agent" onChange={(e)=>{navigate(`/agent/${agent.value}`)}}>
+            <select name="agent" id="agent" onChange={(e) => { navigate(`/agent/${agent.value}`) }}>
               <option selected={true}>SELECT AN AGENT </option>
               {agents &&
                 agents.map((agent, index) => (
                   <option key={agent.uuid} className="relative" value={agent.displayName}>
-                      {agent.displayName}
+                    {agent.displayName}
                   </option>
                 ))}
             </select>

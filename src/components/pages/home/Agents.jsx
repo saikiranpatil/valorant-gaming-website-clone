@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import styles, { layout } from "../../../style";
+import { agentsimg } from "../../../assets";
 
 const Agents = () => (
   <div className={`bg-primary  ${styles.paddingX} ${styles.flexStart}`}>
@@ -43,7 +44,7 @@ const Agents = () => (
               className={`flex ${styles.flexCenter} relative w-[100%] h-[100%]`}
             >
               <img
-                src="https://playvalorant.com/static/agents-group-31d7ce5a3637e45d8b25d2fd03159e6c.png"
+                src={agentsimg}
                 alt="agents"
                 className="w-[100%] h-[100%] relative"
               />
