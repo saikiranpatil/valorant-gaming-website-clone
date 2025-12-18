@@ -11,13 +11,17 @@ import {
   deleteDoc, 
   doc,
   orderBy,
-  query 
+  query,
+  collection, 
+  onSnapshot, 
+  serverTimestamp, 
+  
 } from "firebase/firestore";
 import { 
   ref, 
   uploadBytes, 
   getDownloadURL, 
-  deleteObject 
+  deleteObject
 } from "firebase/storage";
 import { db, storage } from "../firebase/config"; // Updated path for your structure
 
@@ -304,12 +308,21 @@ export const uploadReview = async ({ name, review, rating }) => {
   await addDoc(collection(db, 'reviews'), reviewData);
 };
 
-
 // Subscribe to real-time reviews
 export const subscribeToReviews = (callback) => {
-  return onSnapshot(collection(db, 'reviews'), (snapshot) => {
-    const fetched = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
-    fetched.sort((a, b) => b.timestamp?.seconds - a.timestamp?.seconds);
-    callback(fetched);
-  });
+  // Create a query to the 'reviews' collection, ordered by the 'createdAt' timestamp
+  const reviewsQuery = query(
+    collection(db, 'reviews'),
+    orderBy('createdAt', 'desc') // ⬅️ Change this to order by 'createdAt'
+  );
+
+  // Listen to the query in real-time
+  return onSnapshot(reviewsQuery, (snapshot) => {
+    const fetched = snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
+    
+    // The data is already sorted by the query, so this line is no longer needed.
+    // fetched.sort((a, b) => b.timestamp?.seconds - a.timestamp?.seconds);
+    
+    callback(fetched);
+  });
 };
