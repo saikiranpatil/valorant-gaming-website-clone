@@ -332,20 +332,12 @@ const Store = () => {
               <div className="text-lg text-yellow-800 mb-4">1000 VP Value</div>
               <div className="text-3xl font-bold mb-6">₹750</div>
               
-              <div className="space-y-2">
-                <button 
-                  onClick={() => addToCart(battlePass)}
-                  className="w-full bg-black text-yellow-400 py-2.5 rounded-xl font-bold hover:bg-gray-800 transition-colors duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                >
-                  <ShoppingCart size={18} /> Add to Cart
-                </button>
-                <button 
-                  onClick={() => handleWhatsAppOrder(false)}
-                  className="w-full bg-green-600 text-white py-2.5 rounded-xl font-bold hover:bg-green-700 transition-colors duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
-                >
-                  <MessageCircle size={18} /> Order Now
-                </button>
-              </div>
+              <button 
+                onClick={() => addToCart(battlePass)}
+                className="w-full bg-black text-yellow-400 py-2.5 rounded-xl font-bold hover:bg-gray-800 transition-colors duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+              >
+                <ShoppingCart size={18} /> Add to Cart
+              </button>
             </div>
           </div>
 
@@ -375,20 +367,12 @@ const Store = () => {
                 <div className="text-gray-300 mb-4">Valorant Points</div>
                 <div className="text-3xl font-bold text-red-400 mb-6">₹{pack.price}</div>
                 
-                <div className="space-y-2">
-                  <button 
-                    onClick={() => addToCart(pack)}
-                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 py-2.5 rounded-xl font-bold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-                  >
-                    <ShoppingCart size={18} /> Add to Cart
-                  </button>
-                  <button 
-                    onClick={() => handleWhatsAppOrder(false)}
-                    className="w-full bg-gradient-to-r from-green-500 to-green-600 py-2.5 rounded-xl font-bold hover:from-green-600 hover:to-green-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
-                  >
-                    <MessageCircle size={18} /> Order Now
-                  </button>
-                </div>
+                <button 
+                  onClick={() => addToCart(pack)}
+                  className="w-full bg-gradient-to-r from-blue-500 to-blue-600 py-2.5 rounded-xl font-bold hover:from-blue-600 hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center gap-2"
+                >
+                  <ShoppingCart size={18} /> Add to Cart
+                </button>
               </div>
             </div>
           ))}
